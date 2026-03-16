@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MediChain AI</title>
+  <link rel="stylesheet" href="styles/main.css"/>
+  <link rel="stylesheet" href="styles/components.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="logo">
+      <div class="logo-icon">⛓</div>
+      MediChain <span>AI</span>
+    </div>
+    <div class="nav-links">
+      <button class="nav-btn active" data-page="dashboard">Dashboard</button>
+      <button class="nav-btn" data-page="patients">Patients</button>
+      <button class="nav-btn" data-page="blockchain">Blockchain</button>
+      <button class="nav-btn" data-page="ai">AI Predict</button>
+    </div>
+    <div class="nav-status">
+      <div class="dot"></div>
+      <span>Chain: Active · Block #<span id="blockCount">—</span></span>
+    </div>
+  </nav>
+
+  <!-- PAGES -->
+  <main id="app">
+    <div id="page-dashboard" class="page active"></div>
+    <div id="page-patients"  class="page"></div>
+    <div id="page-blockchain" class="page"></div>
+    <div id="page-ai"        class="page"></div>
+  </main>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"><span id="toastMsg"></span></div>
+
+  <!-- SCRIPTS (order matters) -->
+  <script src="js/api.js"></script>
+  <script src="js/blockchain.js"></script>
+  <script src="js/patients.js"></script>
+  <script src="js/ai.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
