@@ -31,6 +31,7 @@ app.use('/api/', apiLimiter);
 app.use(express.static(path.join(__dirname, '../client')));
 
 // ── API Routes ──────────────────────────────
+app.use('/api/health',     require('./routes/health'));
 app.use('/api/patients',   require('./routes/patients'));
 app.use('/api/blockchain', require('./routes/blockchain'));
 app.use('/api/ai',         require('./routes/ai'));
